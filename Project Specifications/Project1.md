@@ -89,7 +89,7 @@ done
 
 ### Alert System (Python)
 
-- Write a Python script (`alert_system.py`) to monitor the database and trigger alerts if error thresholds are exceeded.
+- Write a Python script (`alert_system.py`) to monitor the database and trigger alerts if error thresholds (5) are exceeded.
 
 ### Automation
 
