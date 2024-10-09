@@ -42,7 +42,7 @@ while true; do
             "Daily backup completed successfully." \
             "Scheduled job 'cleanup_temp_files' executed at $TIMESTAMP." \
             "System health check passed; all services running.")
-            ;; ## Double colon here indicates the end of a case statement in Bash
+            ;; ## Double semi-colon here indicates the end of a case statement in Bash
         WARNING)
             MESSAGE=$(shuf -n 1 -e \
             "Disk space usage at 85% on /dev/sda1." \
