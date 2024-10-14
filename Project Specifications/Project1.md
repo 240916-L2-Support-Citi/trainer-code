@@ -1,4 +1,4 @@
-# Log Monitoring and Alert System P1 - Due 10/21 (Tentatively)
+# Log Monitoring and Alert System P1 - Due 10/18 Friday
 
 ## Description
 
