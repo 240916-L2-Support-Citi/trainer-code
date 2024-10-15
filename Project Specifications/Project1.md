@@ -77,7 +77,7 @@ while true; do
 done
 ```
 
-### Log Monitoring and Insertion (Bash + PostgreSQL)
+### Log Monitoring and Insertion (Bash or Python + PostgreSQL)
 
 - Develop a Bash script (`log_monitor.sh`) that monitors the generated log file.
 - Filter `ERROR` and `FATAL` entries and insert them into a PostgreSQL database.
