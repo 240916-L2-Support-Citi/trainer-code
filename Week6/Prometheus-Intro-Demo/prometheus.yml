@@ -1,0 +1,13 @@
+# This pound symbol denotes a comment in YAML
+# I'll be using these to annotate this file line by line
+
+global: # Global config area, used for setting things like intervals, timeout times, etc.
+  scrape_interval: 15s # How often to scrape metrics, essentially my time delta.
+
+scrape_configs: # Configs for the different individual scrapers or explorers that we are using
+# to get data from out data sources
+
+  - job_name: 'node'
+    static_configs:
+      - targets: ['host.docker.internal:9100'] # This will scrape a node explorer instance
+      # running in a docker container on my local machine, that exposes port 9100.
