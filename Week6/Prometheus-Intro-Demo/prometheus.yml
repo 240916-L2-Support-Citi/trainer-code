@@ -7,7 +7,8 @@ global: # Global config area, used for setting things like intervals, timeout ti
 scrape_configs: # Configs for the different individual scrapers or explorers that we are using
 # to get data from out data sources
 
-  - job_name: 'node'
+  - job_name: 'aws_ec2'
+    metrics_path: '/metrics'
     static_configs:
-      - targets: ['host.docker.internal:9100'] # This will scrape a node explorer instance
+      - targets: ['ec2-34-228-191-39.compute-1.amazonaws.com:8080'] # This will scrape a node explorer instance
       # running in a docker container on my local machine, that exposes port 9100.
