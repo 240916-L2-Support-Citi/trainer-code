@@ -16,7 +16,7 @@ Group 1: Nathan, Lucas, Justice, Dan, Osman
 
 Group 2: Weyman, James, Howard, Danny, Gregory
 
-Group 3: Obaid, Miguel, Isaac, DJ
+Group 3: Obaid, Miguel, Isaac, DJ, Joseph
 
 ---
 
