@@ -12,9 +12,11 @@ This project involves deploying a Python-based API on an AWS EC2 instance, setti
 
 ## Groups
 
-Group 1: 
-Group 2:
-Group 3:
+Group 1: Nathan, Lucas, Justice, Dan, Osman
+
+Group 2: Weyman, James, Howard, Danny, Gregory
+
+Group 3: Obaid, Miguel, Isaac, DJ
 
 ---
 
