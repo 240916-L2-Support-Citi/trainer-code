@@ -1,8 +1,8 @@
-# Pronject 2: Monitoring and Automating an API on AWS with Prometheus and Grafana (Docker)
+# Project 2: Monitoring and Automating an API on AWS with Prometheus and Grafana (Docker)
 
 ## Project Overview
 
-This project involves deploying a Python-based API on an AWS EC2 instance, setting up Prometheus and Grafana locally (using Docker) for monitoring, and writing a Python automation script. Students will gain hands-on experience with API interaction, monitoring, and task automation.
+This project involves deploying a Python-based API on an AWS EC2 instance, setting up Prometheus and Grafana locally (using Docker) for monitoring, and writing a Python automation script. Associates will gain hands-on experience with API interaction, monitoring, and task automation.
 
 ## Project Goals
 
@@ -190,7 +190,7 @@ if __name__ == '__main__':
 
 ## Part 4: Write Automation Script
 
-### Requirements
+### Script Requirements
 
 Write a Python script to:
 
