@@ -39,20 +39,29 @@ def create_item():
     user_id = request.headers.get('User-ID', 'guest')
     token = request.headers.get('Token')
 
+    # If no token is provided, return an error response
     if not token:
         ERROR_RATE.inc()
         return jsonify({"error": "Unauthorized"}), 403
 
     try:
+        # Add user to active_users set
+        active_users.add(user_id)
+        ACTIVE_USERS.set(len(active_users))
+
         REQUEST_COUNT.inc()
         size = len(request.data) if request.data else 0
         AVG_REQUEST_SIZE.set(size)
         
+        # Simulate processing delay and record the time taken
         simulate_processing()
 
+        # Create a new item and increment metrics
         item_id = ''.join(random.choice(string.ascii_letters) for _ in range(8))
         items_store[item_id] = {"created_by": user_id, "timestamp": time.time()}
         TOTAL_ITEMS_CREATED.inc()
+        
+        # Increment user activity with user_id label
         USER_ACTIVITY.labels(user_id=user_id).inc()
 
         latency = time.time() - start_time
@@ -63,9 +72,11 @@ def create_item():
         ERROR_RATE.inc()
         return jsonify({"error": str(e)}), 500
     finally:
+        # Remove user from active_users set after processing the request
         if user_id in active_users:
             active_users.remove(user_id)
         ACTIVE_USERS.set(len(active_users))
+
 
 @app.route('/api/items/<item_id>', methods=['DELETE'])
 def delete_item(item_id):
